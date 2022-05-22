@@ -1,1 +1,239 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+<title>HandoverSim: A Simulation Framework and Benchmark for Human-to-Robot Object Handovers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<style>
+h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+h3 {
+  margin-bottom: 1rem;
+}
+h4 {
+  margin-bottom: 1rem;
+}
+/*
+Bootstrap 5
+https://stackoverflow.com/questions/65480036/bootstrap-5-underline-default-changed
+*/
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+video {
+  width: 100%;
+  height: 100%;
+}
+code {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 20px;
+  white-space: pre-wrap;
+}
+.container {
+  padding: 40px 15px;
+}
+.content {
+  padding: 10px 0;
+}
+.center {
+  text-align: center;
+}
+.authors {
+  line-height: 2;
+  font-size: 18px;
+}
+.center-vertical {
+  vertical-align: middle;
+}
+.video {
+  padding: 20px 0;
+}
+.section {
+  padding: 10px 0 30px;
+}
+.image{
+  padding: 0 30px;
+}
+.embedded-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 10px !important;
+}
+.embedded-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-10 mx-auto">
+      <div class="content">
+        <h2 class="center content">HandoverSim: A Simulation Framework and Benchmark for Human-to-Robot Object Handovers</h2>
+        <div class="center content authors">
+          <div class="col-2 d-inline-block center-vertical">
+            <a href="" target="_blank">
+              <span>Yu-Wei Chao<sup>1</sup></span>
+            </a>
+          </div>
+          <div class="col-2 d-inline-block center-vertical">
+            <a href="https://cpaxton.github.io" target="_blank">
+              <span>Chris Paxton<sup>1</sup></span>
+            </a>
+          </div>
+          <div class="col-2 d-inline-block center-vertical">
+            <a href="https://yuxng.github.io" target="_blank">
+              <span>Yu Xiang<sup>2</sup></span>
+            </a>
+          </div>
+          <div class="col-2 d-inline-block center-vertical">
+            <a href="https://wyang.me" target="_blank">
+              <span>Wei Yang<sup>1</sup></span>
+            </a>
+          </div>
+          <div class="col-3 d-inline-block center-vertical">
+            <a href="https://balakumar-s.github.io" target="_blank">
+              <span>Balakumar Sundaralingam<sup>1</sup></span>
+            </a>
+          </div>
+          <div class="col-2 d-inline-block center-vertical">
+            <a href="https://taochenshh.github.io" target="_blank">
+              <span>Tao Chen<sup>3</sup></span>
+            </a>
+          </div>
+          <div class="col-3 d-inline-block center-vertical">
+            <a href="http://adithyamurali.com" target="_blank">
+              <span>Adithyavairavan Murali<sup>1</sup></span>
+            </a>
+          </div>
+          <div class="col-3 d-inline-block center-vertical">
+            <a href="https://homes.cs.washington.edu/~mcakmak" target="_blank">
+              <span>Maya Cakmak<sup>1,4</sup></span>
+            </a>
+          </div>
+          <div class="col-2 d-inline-block center-vertical">
+            <a href="https://research.nvidia.com/person/dieter-fox" target="_blank">
+              <span>Dieter Fox<sup>1,4</sup></span>
+            </a>
+          </div>
+        </div>
+        <div style="padding: 5px 0"></div>
+        <div class="center content authors">
+          <span><sup>1</sup>NVIDIA, <sup>2</sup>UT Dallas, <sup>3</sup>MIT CSAIL, <sup>4</sup>University of Washington</span>
+        </div>
+        <div class="center authors">
+          <span>IEEE International Conference on Robotics and Automation (ICRA), 2022</span>
+        </div>
+      </div>
+
+      <div class="video">
+        <video autoplay="autoplay" muted="muted" loop="loop">
+          <source src="assets/handover-sim-teaser.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="section">
+        <h3>Abstract</h3>
+        <p>We introduce a new simulation benchmark "HandoverSim" for human-to-robot object handovers. To simulate the giver's motion, we leverage a recent motion capture dataset of hand grasping of objects. We create training and evaluation environments for the receiver with standardized protocols and metrics. We analyze the performance of a set of baselines and show a correlation with a real-world evaluation.</p>
+      </div>
+
+      <div class="section">
+        <h3>Paper</h3>
+        <div class="content">
+          <div class="center image d-inline-block">
+            <a href="./assets/chao_icra2022.pdf" target="_blank">
+              <img src="./assets/pdf.png" height="176px" width="136px">
+              <br>
+              <span class="icon"> <i class="fa-solid fa-file-pdf"></i> </span>
+              <span>PDF</span>
+            </a>
+          </div>
+          <div class="center image d-inline-block">
+            <a href="https://arxiv.org/abs/2205.09747" target="_blank">
+              <img src="./assets/arxiv.png" height="176px" width="136px">
+              <br>
+              <span class="icon"> <i class="fa-solid fa-file-pdf"></i> </span>
+              <span>arXiv</span>
+            </a>
+          </div>
+        </div>
+        <br>
+        <div class="content">
+          <h4>Citing HandoverSim</h4>
+          <p>Please cite HandoverSim if it helps your research:</p>
+          <pre><code>@INPROCEEDINGS{chao:icra2022,
+  author    = {Yu-Wei Chao and Chris Paxton and Yu Xiang and Wei Yang and Balakumar Sundaralingam and Tao Chen and Adithyavairavan Murali and Maya Cakmak and Dieter Fox},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  title     = {{HandoverSim}: A Simulation Framework and Benchmark for Human-to-Robot Object Handovers},
+  year      = {2022},
+}</code></pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Code</h3>
+        <div class="content">
+          <div>
+            <div class="center image d-inline-block">
+              <a href="" target="_blank">
+                <img src="./assets/GitHub-Mark/PNG/GitHub-Mark-64px.png">
+              </a>
+            </div>
+            <div class="d-inline-block center-vertical">
+              <h6><a href="" target="_blank">Handover-Sim</a></h6>
+              <span>A simulation environment and benchmark for human-to-robot object handovers</span>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div>
+            <div class="center image d-inline-block">
+              <a href="" target="_blank">
+                <img src="./assets/GitHub-Mark/PNG/GitHub-Mark-64px.png">
+              </a>
+            </div>
+            <div class="d-inline-block center-vertical">
+              <h6><a href="" target="_blank">EasySim</a></h6>
+              <span>A library for creating Gym environments with unified API to various physics simulators</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Video</h3>
+          <div class="embedded-video">
+            <iframe src="https://www.youtube.com/embed/lX3CF4lFKWo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      </div>
+
+      <div class="section">
+        <h3>Contact</h3>
+        <p>Send any comments or questions to Yu-Wei Chao: <a href="mailto:ychao@nvidia.com">ychao@nvidia.com</a>.</p>
+      </div>
+
+      <hr>
+      <p>Last updated on 2022/05/22</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
